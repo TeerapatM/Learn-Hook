@@ -1,0 +1,41 @@
+.register-box{
+    max-width: 500px;
+    height: 300px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px;
+    border: solid 2px gray;
+    border-radius: 20px;
+    position: relative;
+    background-color: lightgoldenrodyellow;
+}
+.register-box h1{
+    margin: 20px 0 20px
+}
+.register-form{
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.register-form label{
+    padding: 0 10px 0 0;
+    font-size: large;
+    font-weight: 500;
+}
+.register-form input{
+    width: 75%;   
+    border-radius: 10px;
+}
+.register-box button{
+    padding: 5px;
+    margin: 20px 0 20px;
+    width: 100%;
+    background-color: rgb(255, 255, 71);
+    border-radius: 10px;
+    font-weight: 500;
+    border: solid 1px
+}
+.register-box button:hover {
+    background-color: rgb(245, 113, 109);
+}

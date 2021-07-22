@@ -1,18 +1,22 @@
 import React, { createContext, useReducer } from 'react'
+import FetchUser from './FetchUser'
 import LoginArea from './LoginArea'
+import Register from './Register'
 
 //const user = {username: "nervermmy", fullname: "Teerapat Matoum"}
 
 
 function reducer(state, action){
-    if(action.type == "LOGIN"){
-        //return action.payload
-        return ({username: "My", fullname:"Teerapat"})
+    
+    switch (action.type) {
+        case "LOGIN":
+            return action.payload
+        case "LOGOUT":
+            return null
+    
+        default:
+            break;
     }
-    if(action.type == "LOGOUT"){
-        return null
-    }
-    return state
 }
 
 const AuthContext = React.createContext()
@@ -23,7 +27,11 @@ function Home() {
 
     return (
         <AuthContext.Provider value={{authState, dispatch}}>
-            <LoginArea/>
+            <div className="row justify-content-center">
+                <LoginArea/>
+                <Register/>
+                <FetchUser/>
+            </div>
         </AuthContext.Provider>
     )
 }
