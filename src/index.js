@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import Hook  from './component/Hook';
 import reportWebVitals from './reportWebVitals';
+import LoginArea from './component/LoginArea';
+import Home from './component/Home'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Home/>
   </React.StrictMode>,
   document.getElementById('root')
 );
